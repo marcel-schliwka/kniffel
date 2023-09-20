@@ -1,0 +1,199 @@
+/* lato-300 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: url('fonts/lato-v24-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* lato-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/lato-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* lato-900 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: url('fonts/lato-v24-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+body {
+    margin: 0;
+    font-family: Lato;
+    background-color: antiquewhite;
+
+}
+
+footer {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: darkslategray;
+    display: inline-block;
+}
+
+footer a:hover {
+    font-weight: bolder;
+    transform: translateY(-1px);
+    transition: all 125ms ease-in-out;
+}
+
+main {
+    display: flex; /* This will place the sections side by side */
+    min-height: 100svh;
+    background-color: antiquewhite;
+    overflow-x: scroll; /* This will allow horizontal scrolling */
+    scroll-snap-type: x mandatory;
+}
+
+section {
+    flex: 0 0 100svw; /* This will make each section take up 100vw and not grow or shrink */
+    min-height: 100svh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+.startscreen {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.info {
+    max-width: 60svw;
+}
+
+.info > h3 {
+    text-align: center;
+}
+
+.startscreen-heading {
+    text-align: center;
+}
+
+.startscreen > img {
+    object-fit: cover;
+    width: 60svw;
+    margin-top: 25px;
+}
+
+.player-amount {
+    border: unset;
+    width: 60svw;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.start-game-btn {
+    margin: 50px 0;
+    border: unset;
+    font-size: 1.25rem;
+    padding: 20px 40px;
+    cursor: pointer;
+    background-color: #444444;
+    color: white;
+    border-radius: 20px;
+}
+
+button:hover {
+    font-weight: bolder;
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    transition: all 125ms ease-in-out;
+}
+
+input {
+    border-radius: 10px;
+}
+input:focus {
+    outline: 1px solid darkslategray;
+}
+
+.startscreen-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section > h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+section > h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+}
+
+
+.section-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-inline: 20px;
+}
+
+.section-form > label {
+    font-size: 1.25rem;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+.section-form > input {
+    border: unset;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    margin-top: 5px;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.right-align-table {
+    border-collapse: collapse; /* Remove spacing between borders */
+}
+
+.right-align-table td {
+    border: none; /* Remove borders around each cell */
+    text-align: right; /* Right-align the content of the cells */
+    padding: 8px; /* Optional padding for better visual appearance */
+    font-size: 1.1rem;
+}
+
+@media screen and (min-width: 1200px) {
+    .startscreen > img {
+        width: 30svw;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    section {
+        flex: 0.2;
+    }
+    section > h2 {
+        text-align: left;
+        margin-inline: 20px;
+    }
+
+}
