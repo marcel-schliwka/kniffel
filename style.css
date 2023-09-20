@@ -51,15 +51,22 @@ footer a:hover {
 }
 
 main {
-    display: flex; /* This will place the sections side by side */
+    display: flex;
     min-height: 100svh;
     background-color: antiquewhite;
-    overflow-x: scroll; /* This will allow horizontal scrolling */
+    overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+main::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
 }
 
 section {
-    flex: 0 0 100svw; /* This will make each section take up 100vw and not grow or shrink */
+    flex: 0 0 100svw;
     min-height: 100svh;
     scroll-snap-align: start;
     display: flex;
@@ -171,13 +178,13 @@ section > h2 {
 }
 
 .right-align-table {
-    border-collapse: collapse; /* Remove spacing between borders */
+    border-collapse: collapse;
 }
 
 .right-align-table td {
-    border: none; /* Remove borders around each cell */
-    text-align: right; /* Right-align the content of the cells */
-    padding: 8px; /* Optional padding for better visual appearance */
+    border: none; 
+    text-align: right; 
+    padding: 8px; 
     font-size: 1.1rem;
 }
 
